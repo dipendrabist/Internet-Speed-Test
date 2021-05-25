@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                   android:id = "@+id/layout_root"
+                                                   android:layout_width = "fill_parent"
+                                                   android:layout_height = "fill_parent"
+                                                   android:background = "@color/dialogbg"
+                                                   android:padding = "@dimen/_16sdp">
+
+    <ImageView
+        android:id = "@+id/iv_app_icon"
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "wrap_content"
+        android:adjustViewBounds = "true"
+        android:scaleType = "fitCenter"
+        android:src = "@drawable/ic_icon"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent" />
+
+    <TextView
+        android:id = "@+id/textView1"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "@string/app_name"
+        android:textAppearance = "?android:attr/textAppearanceMedium"
+        android:textColor = "@color/white"
+        android:textSize = "16sp"
+        app:layout_constraintBottom_toBottomOf = "@id/iv_app_icon"
+        app:layout_constraintStart_toEndOf = "@id/iv_app_icon"
+        app:layout_constraintTop_toTopOf = "@id/iv_app_icon" />
+
+    <TextView
+        android:id = "@+id/title1"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = ""
+        android:textAppearance = "?android:attr/textAppearanceMedium"
+        android:textColor = "@color/black"
+        android:textSize = "20sp"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/iv_app_icon" />
+
+    <TextView
+        android:id = "@+id/tv_desc"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "@string/ratetext"
+        android:textAppearance = "?android:attr/textAppearanceMedium"
+        android:textColor = "@color/gray"
+        android:textSize = "14sp"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/title1" />
+
+    <TextView
+        android:id = "@+id/tv_desc2"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:layout_marginTop = "@dimen/_4sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "@string/rate_text1"
+        android:textAppearance = "?android:attr/textAppearanceMedium"
+        android:textColor = "@color/gray"
+        android:textSize = "14sp"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc" />
+
+    <ImageView
+        android:id = "@+id/imageView"
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:src = "@drawable/ic_star"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc2" />
+
+    <ImageView
+        android:id = "@+id/imageView2"
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:src = "@drawable/ic_star"
+        app:layout_constraintStart_toEndOf = "@+id/imageView"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc2" />
+
+    <ImageView
+        android:id = "@+id/imageView3"
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:src = "@drawable/ic_star"
+        app:layout_constraintStart_toEndOf = "@+id/imageView2"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc2" />
+
+    <ImageView
+
+        android:id = "@+id/imageView4"
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:src = "@drawable/ic_star"
+        app:layout_constraintStart_toEndOf = "@+id/imageView3"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc2" />
+
+    <ImageView
+
+        android:layout_width = "@dimen/_32sdp"
+        android:layout_height = "@dimen/_32sdp"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:src = "@drawable/ic_star"
+        app:layout_constraintStart_toEndOf = "@+id/imageView4"
+        app:layout_constraintTop_toBottomOf = "@id/tv_desc2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                   android:id = "@+id/activity_main"
+                                                   android:layout_width = "match_parent"
+                                                   android:layout_height = "match_parent"
+                                                   android:background = "@color/colorPrimary"
+                                                   android:orientation = "vertical"
+                                                   android:padding = "@dimen/_16sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/cl_progresschart"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        android:background = "@drawable/bg_speedtest"
+        android:padding = "@dimen/_24sdp"
+        app:layout_constraintDimensionRatio = "1:1"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".95">
+
+        <View
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:background = "@drawable/bg_circle"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id = "@+id/linechart"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:layout_marginBottom = "@dimen/_40sdp"
+            android:background = "@drawable/chart_background"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHeight_percent = ".21"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintWidth_percent = ".45" />
+
+        <ImageView
+            android:id = "@+id/iv_download"
+            android:layout_width = "@dimen/_24sdp"
+            android:layout_height = "@dimen/_24sdp"
+            android:layout_marginStart = "@dimen/_24sdp"
+            android:layout_marginLeft = "@dimen/_24sdp"
+            android:src = "@drawable/ic_download"
+            android:tint = "@color/cp_0"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintStart_toStartOf = "@+id/tickProgressBar"
+            app:layout_constraintTop_toTopOf = "@+id/tickProgressBar" />
+
+        <ImageView
+            android:id = "@+id/iv_upload"
+            android:layout_width = "@dimen/_24sdp"
+            android:layout_height = "@dimen/_24sdp"
+            android:layout_marginEnd = "@dimen/_24sdp"
+            android:layout_marginRight = "@dimen/_24sdp"
+            android:src = "@drawable/ic_upload"
+            android:tint = "@color/cp_0"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintEnd_toEndOf = "@+id/tickProgressBar"
+            app:layout_constraintTop_toTopOf = "@+id/tickProgressBar" />
+
+        <com.sysflame.netdroid.custom_ui.TickProgressBar
+            android:id = "@+id/tickProgressBar"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:progress = "90"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "1:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".95"
+            app:tick_borderWidth = "@dimen/_8sdp"
+            app:tick_centertext = "@dimen/_48ssp"
+            app:tick_degree = "0"
+            app:tick_per_text = "@dimen/_24ssp"
+            app:tick_progressColor = "@color/cp_0"
+            app:tick_tickWidth = "@dimen/_1sdp"
+            app:tick_unit = "MS"
+            app:tick_unprogresColor = "@color/colorAccent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id = "@+id/tv_information"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:alpha = ".5"
+        android:text = "Tell user what todo &amp; background informations"
+        android:textAlignment = "center"
+        android:textColor = "@color/white"
+        app:layout_constraintBottom_toTopOf = "@id/ll_download"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@+id/cl_progresschart" />
+
+    <LinearLayout
+        android:id = "@+id/ll_ping"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical"
+        app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+        app:layout_constraintEnd_toStartOf = "@id/ll_download"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+        app:layout_constraintWidth_percent = ".3">
+
+        <TextView
+            android:id = "@+id/tv_ping_label"
+            style = "@style/LabelTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "PING"
+            android:textColor = "@color/cp_0" />
+
+        <TextView
+            android:id = "@+id/tv_ping_value"
+            style = "@style/ValueTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+
+            android:text = "200"
+            android:textColor = "@color/white" />
+
+        <TextView
+            style = "@style/UnitTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:alpha = ".5"
+            android:text = "MS"
+            android:textColor = "@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/ll_upload"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical"
+        app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toEndOf = "@+id/ll_download"
+        app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+        app:layout_constraintWidth_percent = ".3">
+
+        <TextView
+            android:id = "@+id/tv_upload_label"
+            style = "@style/LabelTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "UPLOAD"
+            android:textColor = "@color/cp_0" />
+
+        <TextView
+            android:id = "@+id/tv_upload_value"
+            style = "@style/ValueTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "12.45"
+            android:textColor = "@color/white" />
+
+        <TextView
+            android:id = "@+id/tv_upload_unit"
+            style = "@style/UnitTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:alpha = ".5"
+            android:text = "MBS"
+            android:textColor = "@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/ll_download"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical"
+        app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+        app:layout_constraintEnd_toStartOf = "@id/ll_upload"
+        app:layout_constraintStart_toEndOf = "@+id/ll_ping"
+        app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+        app:layout_constraintWidth_percent = ".3">
+
+        <TextView
+            android:id = "@+id/tv_download_label"
+            style = "@style/LabelTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "DOWNLOAD"
+            android:textColor = "@color/cp_0" />
+
+        <TextView
+            android:id = "@+id/tv_download_value"
+            style = "@style/ValueTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+
+            android:text = "123.25"
+            android:textColor = "@color/white" />
+
+        <TextView
+            android:id = "@+id/tv_download_unit"
+            style = "@style/UnitTextStyle"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:alpha = ".5"
+            android:text = "MBS"
+            android:textColor = "@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id = "@+id/tv_start"
+        android:layout_width = "@dimen/_48sdp"
+        android:layout_height = "@dimen/_48sdp"
+        android:gravity = "center"
+        android:src = "@drawable/ic_play"
+        android:textColor = "@color/white"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintWidth_percent = ".5" />
+
+    <!--
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomview">
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/boost_rotation"
+            android:visibility="gone" />
+
+
+        <netdroidtesttest.netdroid.custom_ui.SquareImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/boost_rotation" />
+
+        <ImageView
+            android:id="@+id/barImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <com.rodolfonavalon.shaperipplelibrary.ShapeRipple
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            custom:enable_color_transition="true"
+
+            custom:ripple_color="@color/ripple_color"
+            custom:ripple_count="5"
+            custom:ripple_duration="5000"
+            custom:ripple_stroke_width="15dp" />
+
+
+        <LinearLayout
+            android:id="@+id/lin_speedtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/downloadText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/darktext_color"
+                android:textSize="20sp"
+                android:fontFamily="@font/opensans_regular" />
+
+            <TextView
+                android:id="@+id/downloadTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:includeFontPadding="false"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="60sp"
+                android:fontFamily="@font/opensans_regular" />
+
+            <TextView
+                android:id="@+id/downloadUnitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+
+                android:textColor="@color/darktext_color"
+                android:textSize="20sp"
+                android:fontFamily="@font/opensans_regular" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Finding the Best Server."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent=".3">
+
+
+
+        <LinearLayout
+            android:id="@+id/lin_viewspeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:weightSum="2"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rl_buttons"
+            >
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:includeFontPadding="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/ic_download"
+                        android:drawablePadding="5dp"
+                        android:text="DOWNLOAD"
+                        android:textAlignment="center"
+                        android:textColor="@color/darktext_color"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:fontFamily="@font/opensans_regular" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/downloadTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="50sp"
+                            android:fontFamily="@font/opensans_light" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mbps"
+                            android:textAlignment="center"
+                            android:textColor="@color/darktext_color"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_8sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/ic_upload"
+                        android:drawablePadding="5dp"
+                        android:text="UPLOAD"
+                        android:textAlignment="center"
+                        android:textColor="@color/darktext_color"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:includeFontPadding="false"
+
+                        android:fontFamily="@font/opensans_regular" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/uploadTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="50sp"
+                            android:fontFamily="@font/opensans_light" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mbps"
+                            android:textAlignment="center"
+                            android:textColor="@color/darktext_color"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lin_viewspeed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lin_viewspeed">
+
+            <TextView
+                android:id="@+id/tvBegin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/drawable_button"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:text="Begin Test"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/drawable_button"
+                android:paddingBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:paddingTop="10dp"
+                android:text="Test Again"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

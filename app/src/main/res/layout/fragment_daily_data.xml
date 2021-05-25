@@ -1,0 +1,147 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width = "match_parent"
+                                                   android:layout_height = "match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/id_titlebar"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:background = "@color/colorPrimary"
+        android:padding = "@dimen/_16sdp"
+        android:paddingBottom = "@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent">
+
+        <TextView
+            android:id = "@+id/tv_date"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "Date"
+            android:textColor = "@color/darktext_color"
+            android:textSize = "@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf = "@id/tv_ping"
+            app:layout_constraintHorizontal_chainStyle = "spread_inside"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".34" />
+
+        <TextView
+            android:id = "@+id/tv_subdate"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "(mm/dd/yyyy hh:mm)"
+            android:textColor = "@color/textColor2"
+            android:textSize = "@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf = "@id/tv_date"
+            app:layout_constraintStart_toStartOf = "@id/tv_date"
+            app:layout_constraintTop_toBottomOf = "@id/tv_date" />
+
+        <TextView
+            android:id = "@+id/tv_ping"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "Ping"
+            android:textColor = "@color/darktext_color"
+            android:textSize = "@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf = "@id/tv_download"
+            app:layout_constraintStart_toEndOf = "@id/tv_date"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".22" />
+
+        <TextView
+            android:id = "@+id/tv_subping"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "(ms)"
+            android:textColor = "@color/textColor2"
+            android:textSize = "@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf = "@id/tv_ping"
+            app:layout_constraintStart_toStartOf = "@id/tv_ping"
+            app:layout_constraintTop_toBottomOf = "@id/tv_ping" />
+
+        <TextView
+            android:id = "@+id/tv_download"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "Download"
+            android:textColor = "@color/darktext_color"
+            android:textSize = "@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf = "@id/tv_upload"
+            app:layout_constraintStart_toEndOf = "@id/tv_ping"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".22" />
+
+        <TextView
+            android:id = "@+id/tv_subdownload"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "(Mbps)"
+            android:textColor = "@color/textColor2"
+            android:textSize = "@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf = "@id/tv_download"
+            app:layout_constraintStart_toStartOf = "@id/tv_download"
+            app:layout_constraintTop_toBottomOf = "@id/tv_download" />
+
+        <TextView
+            android:id = "@+id/tv_upload"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "Upload"
+            android:textColor = "@color/darktext_color"
+            android:textSize = "@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@id/tv_download"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".22" />
+
+        <TextView
+            android:id = "@+id/tv_subupload"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/opensans_regular"
+            android:gravity = "center"
+            android:text = "(Mbps)"
+            android:textColor = "@color/textColor2"
+            android:textSize = "@dimen/_8ssp"
+            app:layout_constraintEnd_toEndOf = "@id/tv_upload"
+            app:layout_constraintStart_toStartOf = "@id/tv_upload"
+            app:layout_constraintTop_toBottomOf = "@id/tv_upload" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id = "@+id/cardList"
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:layout_marginBottom = "@dimen/_8sdp"
+        android:clipToPadding = "false"
+        app:layout_constraintBottom_toTopOf = "@id/v_ad_unified"
+        app:layout_constraintTop_toBottomOf = "@id/id_titlebar" />
+
+    <FrameLayout
+        android:id = "@+id/v_ad_unified"
+        android:layout_width = "match_parent"
+        android:layout_height = "0dp"
+        android:layout_marginBottom = "@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintHeight_percent = ".12"
+        app:layout_constraintStart_toStartOf = "parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name = "TickProgressBar">
+
+        <attr name = "tick_unprogresColor" format = "color" />
+
+        <attr name = "tick_degree" format = "integer" />
+        <attr name = "tick_progressColor" format = "color" />
+        <attr name = "tick_tickWidth" format = "dimension" />
+        <attr name = "tick_tickDensity" format = "integer" />
+        <attr name = "tick_borderWidth" format = "dimension" />
+        <attr name = "tick_centertext" format = "dimension" />
+        <attr name = "tick_per_text" format = "dimension" />
+        <attr name = "tick_font" format = "string" />
+        <attr name = "tick_unit" format = "string" />
+
+    </declare-styleable>
+</resources>

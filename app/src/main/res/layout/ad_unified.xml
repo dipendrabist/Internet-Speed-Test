@@ -1,0 +1,123 @@
+<androidx.cardview.widget.CardView xmlns:android = "http://schemas.android.com/apk/res/android"
+                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                   android:id = "@+id/c_adview"
+                                   android:layout_width = "match_parent"
+                                   android:layout_height = "@dimen/_72sdp"
+                                   android:backgroundTint = "#30353E"
+                                   app:cardCornerRadius = "@dimen/_8sdp">
+
+    <com.google.android.gms.ads.formats.UnifiedNativeAdView
+        android:id = "@+id/ad_view"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_gravity = "center"
+            android:minHeight = "50dp"
+            android:orientation = "vertical">
+
+            <TextView
+                android:id = "@+id/ad_attribution"
+                android:layout_width = "@dimen/_12sdp"
+                android:layout_height = "@dimen/_12sdp"
+                android:background = "@drawable/bg_text_ad"
+                android:gravity = "center"
+                android:text = "Ad"
+                android:textColor = "@color/white"
+                android:textSize = "@dimen/_8ssp"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id = "@+id/c_ad_icon"
+                android:layout_width = "@dimen/_32sdp"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_marginStart = "@dimen/_16sdp"
+                app:cardCornerRadius = "@dimen/_24sdp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent">
+
+                <ImageView
+                    android:id = "@+id/ad_icon"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:adjustViewBounds = "true" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id = "@+id/ind_alarm"
+                android:layout_width = "@dimen/_8sdp"
+                android:layout_height = "match_parent"
+                android:layout_marginStart = "@dimen/_16sdp"
+                android:background = "@color/colorPrimary"
+                app:layout_constraintStart_toEndOf = "@id/c_ad_icon" />
+
+            <TextView
+                android:id = "@+id/ad_headline"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "@dimen/_8sdp"
+                android:layout_marginEnd = "@dimen/_8sdp"
+                android:fontFamily = "@font/opensans_regular"
+                android:maxLines = "1"
+                android:singleLine = "true"
+                android:text = "test"
+                android:textColor = "@color/darktext_color"
+                android:textSize = "@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf = "@id/ad_advertiser"
+                app:layout_constraintEnd_toStartOf = "@+id/ad_call_to_action"
+                app:layout_constraintStart_toEndOf = "@id/ind_alarm"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_chainStyle = "packed" />
+
+            <TextView
+                android:id = "@+id/ad_advertiser"
+                android:layout_width = "0dp"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "@dimen/_16sdp"
+                android:fontFamily = "@font/opensans_regular"
+                android:maxLines = "1"
+                android:singleLine = "true"
+                android:textColor = "@color/textColor2"
+                android:textSize = "@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/ad_stars"
+                app:layout_constraintStart_toEndOf = "@id/ind_alarm"
+                app:layout_constraintTop_toBottomOf = "@id/ad_headline" />
+
+            <RatingBar
+                android:id = "@+id/ad_stars"
+                style = "?android:attr/ratingBarStyleSmall"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginStart = "@dimen/_8sdp"
+                android:layout_marginEnd = "@dimen/_8sdp"
+                android:isIndicator = "true"
+                android:numStars = "5"
+                android:progress = "50"
+                android:progressTint = "@color/cp_4"
+                android:stepSize = "0.5"
+                app:layout_constraintBottom_toBottomOf = "@id/ad_advertiser"
+                app:layout_constraintEnd_toStartOf = "@+id/ad_call_to_action"
+                app:layout_constraintTop_toTopOf = "@id/ad_advertiser" />
+
+            <ImageView
+                android:id = "@+id/ad_call_to_action"
+                android:layout_width = "@dimen/_32sdp"
+                android:layout_height = "@dimen/_32sdp"
+                android:layout_marginEnd = "@dimen/_8sdp"
+                android:background = "@drawable/tab_indicator"
+                android:padding = "@dimen/_8sdp"
+                android:src = "@drawable/ic_store"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.gms.ads.formats.UnifiedNativeAdView>
+</androidx.cardview.widget.CardView>

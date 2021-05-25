@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width = "match_parent"
+                                                   android:layout_height = "wrap_content"
+                                                   android:background = "#30353E"
+                                                   android:padding = "@dimen/_16sdp">
+
+    <TextView
+        android:id = "@+id/tv_MBps_label"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "MBps"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/rb_MBps"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "@id/rb_MBps" />
+
+    <TextView
+        android:id = "@+id/tv_kBps_label"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "kBps"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/rb_kBps"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "@id/rb_kBps" />
+
+    <TextView
+        android:id = "@+id/tv_Mbps_label"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "Mbps"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/rb_Mbps"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "@id/rb_Mbps" />
+
+    <TextView
+        android:id = "@+id/tv_kbps_label"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "kbps"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/rb_kbps"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "@id/rb_kbps" />
+
+    <TextView
+        android:id = "@+id/tv_MBps_desc"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "(megabyte per second)"
+        android:textColor = "@color/textColor2"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/tv_MBps_label"
+        app:layout_constraintStart_toEndOf = "@id/tv_MBps_label"
+        app:layout_constraintTop_toTopOf = "@id/tv_MBps_label" />
+
+    <TextView
+        android:id = "@+id/tv_kBps_desc"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "(kilobyte per second)"
+        android:textColor = "@color/textColor2"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/tv_kBps_label"
+        app:layout_constraintStart_toEndOf = "@id/tv_kBps_label"
+        app:layout_constraintTop_toTopOf = "@id/tv_kBps_label" />
+
+    <TextView
+        android:id = "@+id/tv_Mbps_desc"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "(megabit per second)"
+        android:textColor = "@color/textColor2"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/tv_Mbps_label"
+        app:layout_constraintStart_toEndOf = "@id/tv_Mbps_label"
+        app:layout_constraintTop_toTopOf = "@id/tv_Mbps_label" />
+
+    <TextView
+        android:id = "@+id/tv_kbps_desc"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "@dimen/_8sdp"
+        android:fontFamily = "@font/opensans_regular"
+        android:text = "(kilobit per second)"
+        android:textColor = "@color/textColor2"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "@id/tv_kbps_label"
+        app:layout_constraintStart_toEndOf = "@id/tv_kbps_label"
+        app:layout_constraintTop_toTopOf = "@id/tv_kbps_label" />
+
+    <RadioButton
+        android:id = "@+id/rb_MBps"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:theme = "@style/CustomRadioTheme"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent" />
+
+    <RadioButton
+        android:id = "@+id/rb_kBps"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:theme = "@style/CustomRadioTheme"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/rb_MBps" />
+
+    <RadioButton
+        android:id = "@+id/rb_Mbps"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:theme = "@style/CustomRadioTheme"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/rb_kBps" />
+
+    <RadioButton
+        android:id = "@+id/rb_kbps"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "@dimen/_8sdp"
+        android:theme = "@style/CustomRadioTheme"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/rb_Mbps" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                                                   xmlns:app = "http://schemas.android.com/apk/res-auto"
+                                                   android:id = "@+id/card_view"
+                                                   android:layout_width = "match_parent"
+                                                   android:layout_height = "@dimen/_32sdp"
+                                                   android:paddingStart = "@dimen/_16sdp"
+                                                   android:paddingEnd = "@dimen/_16sdp">
+
+    <TextView
+        android:id = "@+id/id_date"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:fontFamily = "@font/opensans_regular"
+        android:gravity = "center"
+        android:text = "date"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintHorizontal_chainStyle = "spread_inside"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".34" />
+
+    <TextView
+        android:id = "@+id/id_wifi"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:fontFamily = "@font/opensans_regular"
+        android:gravity = "center"
+        android:text = "wifi"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintStart_toEndOf = "@id/id_date"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".22" />
+
+    <TextView
+        android:id = "@+id/mobile"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:fontFamily = "@font/opensans_regular"
+        android:gravity = "center"
+        android:text = "mobile"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintStart_toEndOf = "@id/id_wifi"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".22" />
+
+    <TextView
+        android:id = "@+id/total"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:fontFamily = "@font/opensans_regular"
+        android:gravity = "center"
+        android:text = "total"
+        android:textColor = "@color/white"
+        android:textSize = "@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toEndOf = "@id/mobile"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".22" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

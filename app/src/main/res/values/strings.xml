@@ -1,0 +1,20 @@
+<resources>
+    <string name = "app_name">Netro Test</string>
+    <string name = "admob_app_id">ca-app-pub-1754326763906656~9730302514</string>
+    <string name = "admob_app_banner">ca-app-pub-1754326763906656/7846089794</string>
+    <string name = "admob_app_interstitial">ca-app-pub-1754326763906656/5364230832</string>
+    <string name = "admob_app_native">ca-app-pub-1754326763906656/9229982323</string>
+
+    <string name = "more_from_us">Developer URL</string>
+    // Developer url
+
+    <string name = "ratetext">We resolved problem(s) successfully.</string>
+    <string name = "rate_text1">Is that worth a good rating?</string>
+
+    <string name = "settings">Settings</string>
+    <string name = "speed">Speed</string>
+    <string name = "history">History</string>
+
+    <string name = "date_format">mm/dd/yyyy HH:mm</string>
+
+</resources>

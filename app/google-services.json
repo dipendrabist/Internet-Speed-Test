@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11423836382",
+    "project_id": "netdroid-test",
+    "storage_bucket": "netdroid-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11423836382:android:1441701f31c168eb7fba4f",
+        "android_client_info": {
+          "package_name": "com.sysflame.netdroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11423836382-2kq14a21nrr69qemonqn1gc5fcv1ubjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQkfcxFmOavperDIKactfpSz1fitZicz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11423836382-2kq14a21nrr69qemonqn1gc5fcv1ubjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

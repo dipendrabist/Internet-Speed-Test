@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name = "AppTheme" parent = "Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name = "colorPrimary">@color/colorPrimary</item>
+        <item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name = "colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name = "AppToolbar" parent = "Widget.AppCompat.Toolbar">
+        <item name = "popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name = "android:background">@color/colorPrimaryDark</item>
+        <item name = "android:elevation">@dimen/_4sdp</item>
+
+    </style>
+
+    <style name = "ToolbarTitleAppearance" parent = "@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name = "android:textSize">@dimen/_16ssp</item>
+        <item name = "android:textColor">@color/white</item>
+        <item name = "android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name = "ToolbarSubtitleAppearance" parent = "@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name = "android:textSize">@dimen/_12ssp</item>
+        <item name = "android:textColor">@color/textColor2</item>
+        <item name = "android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name = "UnitTextStyle">
+        <item name = "android:layout_gravity">center_horizontal</item>
+        <item name = "android:textColor">@color/cp_1</item>
+        <item name = "android:textSize">@dimen/_12ssp</item>
+        <item name = "android:fontFamily">@font/opensans_regular</item>
+
+    </style>
+
+    <style name = "ValueTextStyle">
+        <item name = "android:layout_gravity">center_horizontal</item>
+        <item name = "android:textColor">@color/cp_1</item>
+        <item name = "android:textSize">@dimen/_24ssp</item>
+        <item name = "android:fontFamily">@font/opensans_light</item>
+    </style>
+
+    <style name = "LabelTextStyle">
+        <item name = "android:layout_gravity">center_horizontal</item>
+        <item name = "android:textColor">@color/cp_1</item>
+        <item name = "android:textSize">@dimen/_12ssp</item>
+        <item name = "android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name = "AppTheme.NoActionBar">
+        <item name = "windowActionBar">false</item>
+        <item name = "windowNoTitle">true</item>
+    </style>
+
+    <style name = "AppTheme.AppBarOverlay" parent = "ThemeOverlay.AppCompat.Dark" />
+
+    <style name = "AppTheme.PopupOverlay" parent = "ThemeOverlay.AppCompat.Light" />
+
+    <style name = "MyDialogTheme" parent = "Theme.AppCompat.Light.Dialog.Alert">
+        <item name = "colorAccent">@color/white</item>
+        <item name = "android:background">@color/dialogbg</item>
+        <item name = "android:windowNoTitle">true</item>
+    </style>
+
+    <style name = "CustomRadioTheme" parent = "Widget.AppCompat.CompoundButton.RadioButton">
+        <item name = "android:colorControlNormal">@color/textColor2</item>
+        <item name = "android:colorControlActivated">@color/cp_0</item>
+        <item name = "android:colorControlHighlight">@color/cp_4</item>
+    </style>
+</resources>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.rodolfonavalon:ShapeRippleLibrary:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1cb60884efdf44e8085c4f0f665e52c5/jetified-ShapeRippleLibrary-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1cb60884efdf44e8085c4f0f665e52c5/jetified-ShapeRippleLibrary-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1cb60884efdf44e8085c4f0f665e52c5/jetified-ShapeRippleLibrary-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rodolfonavalon/ShapeRippleLibrary/1.0.0/5903ade21971a52f8bfd0c267b13b7ced07de30a/ShapeRippleLibrary-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rodolfonavalon/ShapeRippleLibrary/1.0.0/184de988d3d67d5db332d4a56a20f072c981fdeb/ShapeRippleLibrary-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
